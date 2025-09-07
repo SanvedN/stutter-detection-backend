@@ -26,7 +26,13 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Download NLTK data
-RUN python -m nltk.downloader punkt punkt_tab averaged_perceptron_tagger maxent_ne_chunker words tagsets english
+RUN python -c "import nltk; \
+nltk.download('punkt'); \
+nltk.download('punkt_tab'); \
+nltk.download('averaged_perceptron_tagger'); \
+nltk.download('maxent_ne_chunker'); \
+nltk.download('words'); \
+nltk.download('tagsets')"
 
 # Download spaCy English model
 RUN python -m spacy download en_core_web_sm
