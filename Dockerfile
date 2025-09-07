@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     libffi-dev \
     libssl-dev \
+    portaudio19-dev \
+    libsndfile1-dev \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure locales (important for UTF-8)
