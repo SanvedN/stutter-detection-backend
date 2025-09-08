@@ -111,9 +111,9 @@ class TranscriptionAnalyzer:
             # Prepare reference text
             self.reference_words = word_tokenize(GRANDFATHERS_PASSAGE.lower())
 
-            logger.info(
-                f"TranscriptionAnalyzer initialized with {model_size} model on {self.device}"
-            )
+            # logger.info(
+            #     f"TranscriptionAnalyzer initialized with {model_size} model on {self.device}"
+            # )
 
         except Exception as e:
             logger.error(f"Error initializing TranscriptionAnalyzer: {e}")
