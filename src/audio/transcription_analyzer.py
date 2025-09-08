@@ -81,8 +81,8 @@ class TranscriptionAnalyzer:
         try:
             # Load Whisper model
             # self.model = whisper.load_model(model_size)
-            self.device = "cuda" if torch.cuda.is_available() else "cpu"
-            self.model.to(self.device)
+            # self.device = "cuda" if torch.cuda.is_available() else "cpu"
+            # self.model.to(self.device)
 
             # Comprehensive filler and speech disfluency patterns
             self.speech_patterns = {
